@@ -1,1 +1,7 @@
 This is the reptiles index page
+
+<ul>
+  <% @reptiles.each do |reptile| %>
+    <li><%= reptile.name %></li>
+  <% end %>
+</ul>
