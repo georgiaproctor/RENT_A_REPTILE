@@ -8,7 +8,7 @@ class ReptilesController < ApplicationController
   end
 
   def show
-    @reptile = List.find(params[:id])
+    @reptile = Reptile.find(params[:id])
   end
 
   def create
