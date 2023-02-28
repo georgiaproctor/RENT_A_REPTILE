@@ -1,0 +1,8 @@
+<h1><%= @reptile.name %></h1>
+<ul>
+<li><%= @reptile.species %>
+<li><%= @reptile.description %>
+<li><%= @reptile.daily_price %>
+</ul>
+
+<%= link_to "book?", new_reptile_booking_path(@reptile)%>
