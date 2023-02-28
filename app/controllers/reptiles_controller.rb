@@ -7,6 +7,10 @@ class ReptilesController < ApplicationController
     @reptile = Reptile.new
   end
 
+  def show
+    @reptile = List.find(params[:id])
+  end
+
   def create
     @reptile = Reptile.new(reptile_params)
     if @reptile.save
