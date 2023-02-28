@@ -1,1 +1,15 @@
-This is the new reptiles page, where you can create a new reptile listing
+<h1>Create a new reptile listing</h1>
+
+<%= form_with model: @reptile do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :species %>
+  <%= f.text_field :species %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <%= f.label :daily_price %>
+  <%= f.number_field :daily_price %>
+  <%= f.submit %>
+
+<% end %>
