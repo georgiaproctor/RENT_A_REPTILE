@@ -24,6 +24,6 @@ class ReptilesController < ApplicationController
   private
 
   def reptile_params
-    params.require(:reptile).permit(:name, :description, :species, :daily_price, :user_id)
+    params.require(:reptile).permit(:name, :description, :species, :daily_price, :photo)
   end
 end

@@ -7,5 +7,7 @@
   <%= f.input :description %>
   <%= f.input :species %>
   <%= f.input :daily_price %>
+  <%= f.input :photo, as: :file  %>
   <%= f.submit %>
+  <%= form.file_field :avatar, direct_upload: true %>
 <% end %>
