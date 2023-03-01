@@ -4,5 +4,7 @@
 <li><%= @reptile.description %>
 <li><%= @reptile.daily_price %>
 </ul>
-
+<% if @reptile.photo.attached? %>
+<%= cl_image_tag @reptile.photo.key %>
+<% end %>
 <%= link_to "book?", new_reptile_booking_path(@reptile)%>

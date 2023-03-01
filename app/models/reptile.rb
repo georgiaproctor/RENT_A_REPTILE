@@ -4,4 +4,6 @@ class Reptile < ApplicationRecord
   validates :description, presence: true, length: { minimum: 30, maximum: 1500 }
   validates :species, presence: true, length: { minimum: 1, maximum: 100 }
   validates :daily_price, presence: true, numericality: true
+
+  has_one_attached :photo
 end
