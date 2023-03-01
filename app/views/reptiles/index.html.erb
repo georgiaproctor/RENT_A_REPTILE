@@ -1,6 +1,6 @@
 <h1>Reptiles</h1>
 <ul>
   <% @reptiles.each do |reptile| %>
-    <li><%= reptile.name %></li>
+    <li><%= link_to reptile.name, reptile_path(reptile) %></li>
   <% end %>
 </ul>
