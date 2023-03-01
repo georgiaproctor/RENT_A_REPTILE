@@ -1,0 +1,36 @@
+#--------------------------------
+
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon d-flex justify-content-space-between">
+  <div class="container-fluid">
+    <div class="navbar-brand" >
+      <%= image_tag "logo.png", alt: "Reptile logo" %>
+    </div>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+          <li class="nav-item active m-4">
+              <marquee direction="up"><h1> Rent-A-Reptile</h1></marquee>
+          </li>
+
+          <li class="nav-item active m-4">
+            <button class = "btn btn-success text-decoration-none" ><%= link_to "Home", root_path(@user) %>  </button>
+          </li>
+      
+          <li class="nav-item dropdown">
+            <div 
+            class="avatar dropdown-toggle m-4" id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <%= image_tag "logo.png", alt: "Reptile logo", width: 40, height: 62.09 %>
+            </div>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <div> <%= link_to "Create New Reptile", reptiles_path(@user) %> </div>
+              <a class="dropdown-item" href="#">Reptile Listings</a>
+              <a class="dropdown-item" data-turbo-method="delete" href="#">Log out</a>
+            </div>
+          </li> 
+
+      </ul>
+    </div>
+  </div>
+</div>
