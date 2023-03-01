@@ -1,1 +1,6 @@
 // Specific CSS for your home-page
+.image {
+ width: 100%;
+ height: calc(100vh - 126.09px);
+ object-fit: cover;
+}
