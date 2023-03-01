@@ -1,1 +1,9 @@
-This is the "new booking" page
+<h1>Create a new booking </h1>
+
+<%= link_to '< back to Bookings', bookings_path %>
+
+<%= simple_form_for [@reptile, @booking] do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.submit %>
+<% end %>

@@ -1,0 +1,6 @@
+<div class="container">
+<%= @user.email %>
+<% @user.bookings.each do |booking| %>
+  <%= booking.reptile.name %>
+<% end %>
+</div>

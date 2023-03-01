@@ -4,13 +4,16 @@ class BookingsController < ApplicationController
   end
 
   def new
+    @reptile = Reptile.find(params[:reptile_id])
     @booking = Booking.new
   end
 
   def create
     @booking = Booking.new(booking_params)
+    @booking.reptile = Reptile.find(params[:reptile_id])
+    @booking.user = current_user
     if @booking.save
-      redirect_to bookings_path
+      redirect_to user_path(@booking.user)
     else
       render :new, status: :unprocessable_entity
     end
