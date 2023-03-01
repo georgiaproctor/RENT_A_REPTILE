@@ -13,8 +13,9 @@ class ReptilesController < ApplicationController
 
   def create
     @reptile = Reptile.new(reptile_params)
+    @repitle.user = current_user
     if @reptile.save
-      redirect_to reptile_path(@reptile)
+      redirect_to reptiles_path
     else
       render :new, status: :unprocessable_entity
     end
