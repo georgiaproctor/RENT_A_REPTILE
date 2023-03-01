@@ -13,7 +13,7 @@ class ReptilesController < ApplicationController
 
   def create
     @reptile = Reptile.new(reptile_params)
-    @repitle.user = current_user
+    @reptile.user = current_user
     if @reptile.save
       redirect_to reptiles_path
     else
