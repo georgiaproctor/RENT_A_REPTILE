@@ -6,7 +6,7 @@
 </ul>
 
 <% if @reptile.photo.attached? %>
-<%= cl_image_tag @reptile.photo.key %>
+<%= cl_image_tag @reptile.photo.key, height:500, width:600 %>
 <% end %>
 
 <%= link_to 'Back to all reptiles', reptiles_path %>

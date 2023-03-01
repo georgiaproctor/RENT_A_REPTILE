@@ -1,6 +1,21 @@
-<h1>Reptiles</h1>
-<ul>
-  <% @reptiles.each do |reptile| %>
-    <li><%= link_to reptile.name, reptile_path(reptile) %></li>
-  <% end %>
-</ul>
+
+<div class="container">
+  <h1>Reptiles</h1>
+    <div class="row">
+      <% @reptiles.each do |reptile| %>
+        <div class="col-sm-3">
+        <%= link_to reptile_path(reptile) do  %>
+          <% if reptile.photo.attached? %>
+            <%= cl_image_tag reptile.photo.key, height: 300, class: "w-100" %>
+              <ul style="text-decoration: none"; >
+              <li><%= reptile.name %>
+              <li><%= reptile.species %>
+              <li><%= reptile.daily_price.to_i %>
+              </ul>
+          <% end %>
+          <% end %>
+
+        </div>
+      <% end %>
+  </div>
+</div>
