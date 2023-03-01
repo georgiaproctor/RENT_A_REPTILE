@@ -1,8 +1,15 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
+
+  <div class="d-flex align-items-center">
+    <div class="navbar-brand">
       <%= image_tag "logo.png" %>
-    <% end %>
+    </div>
+    <div class="nav-item active m-4">
+      <marquee direction="up"><h1 style="font-stretch:expanded;"> Rent-A-Reptile</h1></marquee>
+    </div>
+  </div>
+   
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -11,9 +18,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active m-4">
-              <marquee direction="up"><h1> Rent-A-Reptile</h1></marquee>
-          </li>
+          
 
           <li class="nav-item active m-4">
             <button class = "btn btn-success text-decoration-none" ><%= link_to "Home", root_path(@user) %>  </button>
@@ -26,11 +31,11 @@
             <div class="dropdown-menu dropdown-menu-end p-3" aria-labelledby="navbarDropdown">
               <button class ="btn btn-success m-2"> <%= link_to "View All Reptile", reptiles_path(@user) %> </button>
               <button class ="btn btn-success m-2"> <%= link_to "Create New Reptile", new_reptile_path(@user) %> </button>
-               <button class ="btn btn-danger m-2"> <%= link_to "Log Out", destroy_user_session_path(@user) %> </button>
+               <button class ="btn btn-danger m-2"> <%= link_to "Log Out", destroy_user_session_path(@user), data: { turbo_method: :delete, turbo_confirm: "💔Really want to relinquish the reptiles💔?!" }%> </button>
             </div>
           </li>
         <% else %>
-          <li class="nav-item">
+          <li class="nav-item btn btn-danger">
             <%= link_to "Login", new_user_session_path, class: "nav-link" %>
           </li>
         <% end %>
