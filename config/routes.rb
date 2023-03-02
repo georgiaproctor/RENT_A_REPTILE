@@ -5,11 +5,14 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
-  get "/users/:id", to: "users#show", as: :user
+  resources :users, only: [:show] do
+    resources :bookings, only: [:index]
+  end
+
+  # above code is me trying to refactor the below line
+  # get "/users/:id", to: "users#show", as: :user
 
   resources :reptiles do
     resources :bookings, only: [:new, :create]
   end
-
-  resources :bookings, only: [:index]
 end
