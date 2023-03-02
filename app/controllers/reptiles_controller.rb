@@ -21,6 +21,12 @@ class ReptilesController < ApplicationController
     end
   end
 
+  def destroy
+    @reptile = Reptile.find(params[:id])
+    @reptile.destroy
+    redirect_to reptiles_path
+  end
+
   private
 
   def reptile_params
