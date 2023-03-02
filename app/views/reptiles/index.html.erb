@@ -8,9 +8,12 @@
 
            <div class="reusable-card" style=" background: url('  <%= cl_image_path reptile.photo.key%>');background-repeat: no-repeat;background-position: center;background-size: cover;">
             <% end %>
-          <div class="container__info">
-            <span>£<%= reptile.daily_price.to_i %></span>
-          </div>
+               <div class="container__info">
+                <div class="container__info">
+    <span>£ <%= reptile.daily_price %></span>
+
+   </div>
+              </div>
           <div class="container__profile">
             <div class="container__profile__text">
             <h2><%= reptile.name %></h2>
@@ -18,16 +21,10 @@
             </div>
           </div>
 
-         
+
 
         </div>
          <% end %>
       <% end %>
   </div>
 </div>
-
-
-
-
-
-
