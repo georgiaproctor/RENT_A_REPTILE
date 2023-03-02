@@ -4,11 +4,13 @@
     <div class="navbar-brand">
          <div class="nav-item dropdown">
             <%= image_tag "logo.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+            <% if user_signed_in? %>  
             <div class="dropdown-menu dropdown-menu-start" aria-labelledby="navbarDropdown">
               <%= link_to "Home", root_path, class: "dropdown-item" %>
               <%= link_to "bookings", user_bookings_path(current_user), class: "dropdown-item" %>
               <%= link_to "Log out", destroy_user_session_path, class: "dropdown-item", data: {turbo_method: :delete} %>
             </div>
+            <% end %>
           </div>
     </div>
     <div class="nav-item active m-4">
