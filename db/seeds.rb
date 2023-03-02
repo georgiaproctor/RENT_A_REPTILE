@@ -40,6 +40,16 @@ puts "Creating Reptiles and users"
       username: "nnamdi",
       password: "123456"
       )
+  user6 = User.create!(
+    email: "matt@gmail.com",
+    username: "matt",
+    password: "123456"
+    )
+  user7 = User.create!(
+    email: "paul@gmail.com",
+    username: "paul",
+    password: "123456"
+    )
 
 
 
