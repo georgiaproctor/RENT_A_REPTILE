@@ -1,9 +1,29 @@
-<h1>Create a new booking </h1>
+<div class="container">
 
-<%= link_to '< back to reptiles', reptiles_path %>
+  <div class="row">
 
-<%= simple_form_for [@reptile, @booking] do |f| %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <%= f.submit 'book', class: "bttn", wrap_with: { tag: 'span',tag: 'span',tag: 'span',tag: 'span' } %>
-<% end %>
+    <div class="col-6">
+      <h1>Create a new booking </h1>
+
+      <%= link_to '< back to reptiles', reptiles_path %>
+
+      <%= simple_form_for [@reptile, @booking] do |f| %>
+        <%= f.input :start_date, as: :date, html5: true %>
+        <%= f.input :end_date, as: :date, html5: true %>
+        <%= f.submit %>
+      <% end %>
+
+    </div>
+
+    <div class="col-6">
+
+      <% if @reptile.photo.attached? %>
+        <%= cl_image_tag @reptile.photo.key, height:500, width:600 %>
+      <% end %>
+
+    </div>
+
+  </div>
+
+</div>
+
