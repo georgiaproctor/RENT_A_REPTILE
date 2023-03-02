@@ -3,7 +3,7 @@ class Reptile < ApplicationRecord
   validates :name, presence: true
   validates :description, presence: true, length: { minimum: 1, maximum: 1500 }
   validates :species, presence: true, length: { minimum: 1, maximum: 100 }
-  validates :daily_price, presence: true, numericality: true, format: { with: /\A\d+(\.\d{1,2})?\z/ }
+  validates :daily_price, presence: true, numericality: true
 
   has_one_attached :photo
 
@@ -13,5 +13,5 @@ class Reptile < ApplicationRecord
 #     unless read_attribute_before_type_cast('price') =~ PRICE_REGEXP
 #       errors.add('price', 'must match the correct format')
 #     end
-#   end
+# end
 end

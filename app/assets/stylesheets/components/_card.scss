@@ -8,13 +8,13 @@
  background-repeat: no-repeat;
  background-position: center;
  background-size: cover;
- width: 250px;
+ width: 300px;
  height: 350px;
  position: relative;
  box-shadow: 0 0 50px rgba(0, 0, 0, 0.315);
  .container__info {
   @include bottom;
-  bottom: 20%;
+  bottom: 25%;
   display: flex;
   align-items: flex-end;
   padding: 15px 30px;
@@ -42,8 +42,9 @@
    margin-right: 10px;
   }
   h2 {
-   color: #334454;
+   color: black;
    font-size: 1.2rem;
+   font-family:  Nunito, Helvetica, "sans-serif";
   }
   p {
    color: #a1b2bc;
@@ -51,6 +52,7 @@
   }
   p b {
    font-style: italic;
+   font-family:  Nunito, Helvetica, "sans-serif";
   }
  }
 }
@@ -60,3 +62,4 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
 }
+

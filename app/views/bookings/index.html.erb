@@ -5,22 +5,34 @@
     <div class="col-8">
       <h1>Upcoming bookings</h1>
       <% @user.bookings.each do |booking| %>
-        <div>
-          <%= booking.reptile.name %>
-          <%= booking.reptile.species %>
-          <%= "£#{booking.reptile.daily_price}" %>
-        </div>
+        <% if booking.end_date >= Date.today %>
+          <div>
+            <h5><%= booking.reptile.name %></h5>
+            <%= booking.reptile.species %>
+            <% booking_length = booking.end_date - booking.start_date + 1 %>
+            <% booking_price = booking_length * booking.reptile.daily_price %>
+            <%= "£#{booking_price} (#{booking_length} days @ £#{booking.reptile.daily_price}/day)" %>
+            <%= "Start: #{booking.start_date}" %>
+            <%= "End: #{booking.end_date}" %>
+          </div>
+        <% end %>
       <% end %>
     </div>
 
     <div class="col-4">
       <h4>Past bookings</h4>
       <% @user.bookings.each do |booking| %>
-        <div>
-          <%= booking.reptile.name %>
-          <%= booking.reptile.species %>
-          <%= "£#{booking.reptile.daily_price}" %>
-        </div>
+        <% if booking.end_date < Date.today %>
+          <div>
+            <h5><%= booking.reptile.name %></h5>
+            <%= booking.reptile.species %>
+            <% booking_length = booking.end_date - booking.start_date + 1 %>
+            <% booking_price = booking_length * booking.reptile.daily_price %>
+            <%= "£#{booking_price} (#{booking_length} days @ £#{booking.reptile.daily_price}/day)" %>
+            <%= "Start: #{booking.start_date}" %>
+            <%= "End: #{booking.end_date}" %>
+          </div>
+        <% end %>
       <% end %>
     </div>
 
