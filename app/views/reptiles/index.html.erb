@@ -1,30 +1,25 @@
 
 <div class="container">
-  <h1>Reptiles</h1>
-    <div class="cards">
-      <% @reptiles.each do |reptile| %>
+  <div class="cards">
+    <% @reptiles.each do |reptile| %>
       <%= link_to reptile_path(reptile) do  %>
-          <% if reptile.photo.attached? %>
-
-           <div class="reusable-card" style=" background: url('  <%= cl_image_path reptile.photo.key%>');background-repeat: no-repeat;background-position: center;background-size: cover;">
-            <% end %>
-               <div class="container__info">
-                <div class="container__info">
-    <span>£<%= reptile.daily_price %></span>
-
-   </div>
-              </div>
-          <div class="container__profile">
-            <div class="container__profile__text">
-            <h2><%= reptile.name %></h2>
-            <p><b><%= reptile.species %></b></p>
+        <% if reptile.photo.attached? %>
+          <div class="reusable-card" style=" background: url('  <%= cl_image_path reptile.photo.key%>');background-repeat: no-repeat;background-position: center;background-size: cover;">
+            <div class="container__info">
+              <span>£ <%= reptile.daily_price %></span>
             </div>
-          </div>
 
+            <div class="container__profile">
+              <div class="container__profile__text">
+                <h2><%= reptile.name %></h2>
+                <p><b><%= reptile.species %></b></p>
+              </div>
+            </div>
 
+            </div>
+        <% end %>
 
-        </div>
-         <% end %>
       <% end %>
+    <% end %>
   </div>
 </div>
