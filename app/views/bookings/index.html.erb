@@ -1,6 +1,29 @@
 <div class="container">
-  <%= @user.email %>
-  <% @user.bookings.each do |booking| %>
-    <%= booking.reptile.name %>
-  <% end %>
+
+  <div class="row">
+
+    <div class="col-8">
+      <h1>Upcoming bookings</h1>
+      <% @user.bookings.each do |booking| %>
+        <div>
+          <%= booking.reptile.name %>
+          <%= booking.reptile.species %>
+          <%= "£#{booking.reptile.daily_price}" %>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="col-4">
+      <h4>Past bookings</h4>
+      <% @user.bookings.each do |booking| %>
+        <div>
+          <%= booking.reptile.name %>
+          <%= booking.reptile.species %>
+          <%= "£#{booking.reptile.daily_price}" %>
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+
 </div>
