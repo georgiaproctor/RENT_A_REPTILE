@@ -5,6 +5,7 @@
       <% @reptiles.each do |reptile| %>
       <%= link_to reptile_path(reptile) do  %>
           <% if reptile.photo.attached? %>
+
            <div class="reusable-card" style=" background: url('  <%= cl_image_path reptile.photo.key%>');background-repeat: no-repeat;background-position: center;background-size: cover;">
             <% end %>
           <div class="container__info">
@@ -16,6 +17,9 @@
             <p><b><%= reptile.species %></b></p>
             </div>
           </div>
+
+         
+
         </div>
          <% end %>
       <% end %>

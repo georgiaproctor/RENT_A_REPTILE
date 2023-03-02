@@ -1,3 +1,29 @@
-This is the bookings index page
+<div class="container">
 
-<%# We don't need this page but keeping it here for now just in case %>
+  <div class="row">
+
+    <div class="col-8">
+      <h1>Upcoming bookings</h1>
+      <% @user.bookings.each do |booking| %>
+        <div>
+          <%= booking.reptile.name %>
+          <%= booking.reptile.species %>
+          <%= "£#{booking.reptile.daily_price}" %>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="col-4">
+      <h4>Past bookings</h4>
+      <% @user.bookings.each do |booking| %>
+        <div>
+          <%= booking.reptile.name %>
+          <%= booking.reptile.species %>
+          <%= "£#{booking.reptile.daily_price}" %>
+        </div>
+      <% end %>
+    </div>
+
+  </div>
+
+</div>
