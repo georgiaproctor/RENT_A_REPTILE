@@ -1,13 +1,15 @@
-<h1><%= @reptile.name %></h1>
-<ul>
-<li><%= @reptile.species %>
-<li><%= @reptile.description %>
-<li><%= @reptile.daily_price %>
-</ul>
-
-<% if @reptile.photo.attached? %>
+<div class="card-product">
+  <% if @reptile.photo.attached? %>
 <%= cl_image_tag @reptile.photo.key, height:500, width:600 %>
 <% end %>
+  <div class="card-product-infos">
+    <h3><%= @reptile.name %></h3>
+    <h2><%= @reptile.species %></h2>
+    <p><%=@reptile.description%></p>
+    <p>£<%= @reptile.daily_price %>
+  </div>
+</div>
+
 
 <div class="d-flex justify-content-around">
 
@@ -26,6 +28,7 @@
         back
         <% end %>
     </div>
+
 
     <div class="m-3">
     <%= link_to "Delete Reptile", reptile_path(@reptile), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this reptile?" }, class: "bttn", style: "--color: #3d673e;"  %>

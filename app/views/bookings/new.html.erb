@@ -4,13 +4,16 @@
 
     <div class="col-6">
       <h1>Create a new booking </h1>
-
-      <%= link_to '< back to reptiles', reptiles_path %>
+      <div class="m-3">
+          <%= link_to(reptiles_path, class: "bttn", style: "--color: #3d673e;") do %>
+          back
+          <% end %>
+      </div>
 
       <%= simple_form_for [@reptile, @booking] do |f| %>
         <%= f.input :start_date, as: :date, html5: true %>
         <%= f.input :end_date, as: :date, html5: true %>
-        <%= f.submit %>
+        <%= f.submit class: 'bttn' %>
       <% end %>
 
     </div>
