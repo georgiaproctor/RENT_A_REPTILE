@@ -47,9 +47,9 @@ puts "Creating Reptiles and users"
     name: "Harry",
     description: "The sand lizard (Lacerta agilis) is a lacertid lizard distributed across most of Europe from France and across the continent to Lake Baikal in Russia.[2][3] It does not occur in European Turkey. Its distribution is often patchy.[4] In the sand lizard's northern populations, such as in Great Britain, it is only able to survive along coastal heathlands where the sand is hot enough to incubate their eggs.",
     species: "Sand lizard",
+
     daily_price: rand(850..4060),
     user: user1
-
   )
     file_1 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677684208/colin-watts-jpwz6dBhy-U-unsplash_a0elgf.jpg")
     harry.photo.attach(io: file_1, filename:"harry.jpg", content_type: "image/jpg")
@@ -62,7 +62,7 @@ puts "Creating Reptiles and users"
     user: user2
   )
 
-  file_2 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677684208/colin-watts-jpwz6dBhy-U-unsplash_a0elgf.jpg")
+  file_2 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677754407/tortoise_hrexbo.jpg")
   john.photo.attach(io: file_2, filename:"harry.jpg", content_type: "image/jpg")
 
    greg = Reptile.create!(
@@ -72,7 +72,7 @@ puts "Creating Reptiles and users"
     daily_price: rand(850..4060),
     user: user3
   )
-  file_3 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677684208/colin-watts-jpwz6dBhy-U-unsplash_a0elgf.jpg")
+  file_3 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677761616/snake_oyg7rq.webp")
   greg.photo.attach(io: file_3, filename:"harry.jpg", content_type: "image/jpg")
 
    mark = Reptile.create!(
@@ -83,7 +83,7 @@ puts "Creating Reptiles and users"
     user: user4
   )
 
-  file_4 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677684208/colin-watts-jpwz6dBhy-U-unsplash_a0elgf.jpg")
+  file_4 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677768492/iguana_yfqgbc.jpg")
   mark.photo.attach(io: file_4, filename:"harry.jpg", content_type: "image/jpg")
 
    luke = Reptile.create!(
@@ -93,7 +93,7 @@ puts "Creating Reptiles and users"
     daily_price: rand(850..40600),
     user: user5
   )
-  file_5 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677684208/colin-watts-jpwz6dBhy-U-unsplash_a0elgf.jpg")
+  file_5 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677769354/shelly-collins-YppMBEPyfFQ-unsplash_x1z9i0.jpg")
   luke.photo.attach(io: file_5, filename:"harry.jpg", content_type: "image/jpg")
 
 
