@@ -83,7 +83,7 @@ puts "Creating Reptiles and users"
     description: "The sand lizard (Lacerta agilis) is a lacertid lizard distributed across most of Europe from France and across the continent to Lake Baikal in Russia.[2][3] It does not occur in European Turkey. Its distribution is often patchy.[4] In the sand lizard's northern populations, such as in Great Britain, it is only able to survive along coastal heathlands where the sand is hot enough to incubate their eggs.",
     species: "Sand lizard",
 
-    daily_price: rand(850..1500),
+    daily_price: 16.44,
     user: user1
   )
     file_1 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677684208/colin-watts-jpwz6dBhy-U-unsplash_a0elgf.jpg")
@@ -93,7 +93,7 @@ puts "Creating Reptiles and users"
     name: "John",
     description: "Turtles are an order of reptiles known as Testudines, characterized by a special shell developed mainly from their ribs. Modern turtles are divided into two major groups, the Pleurodira (side necked turtles) and Cryptodira (hidden necked turtles), which differ in the way the head retracts. There are 360 living and recently extinct species of turtles, including land-dwelling tortoises and freshwater terrapins. They are found on most continents, some islands and, in the case of sea turtles, much of the ocean.",
     species: "Turtle",
-    daily_price: rand(850..1500),
+    daily_price: 14.34,
     user: user2
   )
 
@@ -104,7 +104,7 @@ puts "Creating Reptiles and users"
     name: "Greg",
     description: "Snakes are elongated, limbless, carnivorous reptiles of the suborder Serpentes /sɜːrˈpɛntiːz/.[2] Like all other squamates, snakes are ectothermic, amniote vertebrates covered in overlapping scales. Many species of snakes have skulls with several more joints than their lizard ancestors, enabling them to swallow prey much larger than their heads (cranial kinesis). To accommodate their narrow bodies, snakes' paired organs (such as kidneys) appear one in front of the other instead of side by side, and most have only one functional lung. Some species retain a pelvic girdle with a pair of vestigial claws on either side of the cloaca.",
     species: "Snake",
-    daily_price: rand(850..1500),
+    daily_price: 10.23,
     user: user3
   )
   file_3 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677761616/snake_oyg7rq.webp")
@@ -114,7 +114,7 @@ puts "Creating Reptiles and users"
     name: "Mark",
     description: "Iguana is a genus of herbivorous lizards that are native to tropical areas of Mexico, Central America, South America, and the Caribbean. The genus was first described in 1768 by Austrian naturalist Josephus Nicolaus Laurenti in his book Specimen Medicum, Exhibens Synopsin Reptilium Emendatam cum Experimentis circa Venena. Two species are placed in the genus, the green iguana, which is widespread throughout its range and a popular pet, and the Lesser Antillean iguana, which is native to the Lesser Antilles. Genetic analysis indicates that the green iguana may comprise a complex of multiple species, some of which have been recently described, but the Reptile Database considers all of these as subspecies of the green iguana.",
     species: "Iguana",
-    daily_price: rand(850..1500),
+    daily_price: 12.99,
     user: user4
   )
 
@@ -125,7 +125,7 @@ puts "Creating Reptiles and users"
     name: "Luke",
     description: "Crocodiles (family Crocodylidae) or true crocodiles are large semiaquatic reptiles that live throughout the tropics in Africa, Asia, the Americas and Australia. The term crocodile is sometimes used even more loosely to include all extant members of the order Crocodilia, which includes the alligators and caimans (family Alligatoridae), the gharial and false gharial (family Gavialidae) among other extinct taxa.",
     species: "Crocodile",
-    daily_price: rand(850..1500),
+    daily_price: 11.89,
     user: user5
   )
   file_5 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677838839/development/u32cwbbr9bxubbb87rm2z8qm3dg6.jpg")
@@ -137,7 +137,7 @@ puts "Creating Reptiles and users"
 
     ",
     species: "Crested gecko",
-    daily_price: rand(850..1500),
+    daily_price: 21.00,
     user: user6
   )
   file_6 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677779850/licensed-image_rlnn1y.jpg")
@@ -149,7 +149,7 @@ puts "Creating Reptiles and users"
 
     As a result of their size, Komodo dragons are apex predators, and dominate the ecosystems in which they live. Komodo dragons hunt and ambush prey including invertebrates, birds, and mammals. It has been claimed that they have a venomous bite; there are two glands in the lower jaw that secrete several toxic proteins. The biological significance of these proteins is disputed, but the glands have been shown to secrete an anticoagulant. Komodo dragons' group behavior in hunting is exceptional in the reptile world. The diet of Komodo dragons mainly consists of Javan rusa (Rusa timorensis), though they also eat considerable amounts of carrion. Komodo dragons also occasionally attack humans.",
     species: "Komodo Dragon",
-    daily_price: rand(850..1500),
+    daily_price: 9.00,
     user: user7
   )
   file_7 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677779914/development/surnm39eav68y6lxn4sjzlvmdmin.webp")
@@ -160,7 +160,7 @@ puts "Creating Reptiles and users"
     name: "Delilah",
     description: "Chameleons or chamaeleons (family Chamaeleonidae) are a distinctive and highly specialized clade of Old World lizards with 200 species described as of June 2015.[1] The members of this family are best known for their distinct range of colors, being capable of shifting to different hues and degrees of brightness. The large number of species in the family exhibit considerable variability in their capacity to change color. For some, it is more of a shift of brightness (shades of brown); for others, a plethora of color-combinations (reds, yellows, greens, blues) can be seen.",
     species: "Chameleon",
-    daily_price: rand(850..1500),
+    daily_price: 19.08,
     user: user8
   )
   file_8 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677839926/balogun-wareez-ZAqDui0HXRU-unsplash_su6fpr.jpg")
@@ -172,7 +172,7 @@ puts "Creating Reptiles and users"
 
     Other names include the Carolina anole, Carolina green anole, American anole, American green anole, North American green anole and red-throated anole. It is commonly called chameleon in the southeastern United States and sometimes referred to as the American chameleon (typically in the pet trade) due to its color-changing ability; however, it is not a true chameleon.",
     species: "Green Anole",
-    daily_price: rand(850..1500),
+    daily_price: 11.69,
     user: user9
   )
   file_9 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677840292/3818630739_60c3697540_o_anerbb.webp")
@@ -182,7 +182,7 @@ puts "Creating Reptiles and users"
     name: "Daphne",
     description: "The armadillo girdled lizard (Ouroborus cataphractus),[2] also commonly known as the armadillo lizard, the armadillo spiny-tailed lizard, and the golden-armadillo lizard, is a species of lizard in the family Cordylidae. The species is endemic to desert areas along the western coast of South Africa.[3] In 2011, it was moved to its own genus based on molecular phylogeny, but formerly it was included in the genus Cordylus.[2][4]",
     species: "Armadillo Girdled Lizard",
-    daily_price: rand(850..1500),
+    daily_price: 16.00,
     user: user10
   )
   file_10 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677840718/armadillo-lizard-biting-its-tail_lf0i1o.jpg")
@@ -194,7 +194,7 @@ puts "Creating Reptiles and users"
 
     The dorsoventrally flattened body of C. mydas is covered by a large, teardrop-shaped carapace; it has a pair of large, paddle-like flippers. It is usually lightly colored, although in the eastern Pacific populations, parts of the carapace can be almost black. Unlike other members of its family, such as the hawksbill sea turtle, C. mydas is mostly herbivorous. The adults usually inhabit shallow lagoons, feeding mostly on various species of seagrasses.[8] The turtles bite off the tips of the blades of seagrass, which keeps the grass healthy.",
     species: "Green sea turtle",
-    daily_price: rand(850..1500),
+    daily_price: 8.99,
     user: user11
   )
   file_11 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677841101/gettyimages-1145422609_ywzfzv.webp")
@@ -242,45 +242,3 @@ puts "Creating Reptiles and users"
 
   puts "reptiles created"
 
-
-  # t.string "email", default: "", null: false
-  # t.string "encrypted_password", default: "", null: false
-  # t.string "reset_password_token"
-  # t.datetime "reset_password_sent_at"
-  # t.datetime "remember_created_at"
-  # t.datetime "created_at", null: false
-  # t.datetime "updated_at", null: false
-  # t.string "username"
-  # t.index ["email"], name: "index_users_on_email", unique: true
-  # t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  # Faker::Name.name
-
-# 20.times do
-#   Reptile.create
-#    name:Faker::Name.name,
-#    description:Faker::Lorem.characters(number: 600, min_alpha: 100, max_alpha: 600),
-#    species: Faker::Creature::Animal.name,
-#    daily_price: rand(8..40),
-
-# end
-
-
-
-  #  belongs_to :user
-  # validates :name, presence: true
-  # validates :description, presence: true, length: { minimum: 100, maximum: 500 }
-  # validates :species, presence: true, length: { minimum: 1, maximum: 100 }
-  # validates :daily_price, presence: true, numericality: true
-
-
-
-
-
-
-
-
-# t.string :name
-# t.text :description
-# t.string :species
-# t.integer :daily_price
-# t.references :user, null: false, foreign_key: true
