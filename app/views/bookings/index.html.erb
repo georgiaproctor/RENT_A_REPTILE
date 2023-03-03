@@ -18,10 +18,8 @@
                 <% booking_price = booking_length * (booking.reptile.daily_price) %>
                 <%= "£#{booking_price} (#{booking_length} days @ £#{booking.reptile.daily_price}/day)" %>
 
-                <div class="m-3">
-                  <%= "[delete button placeholder]" %>
-                  <%# <%= link_to "Delete", "", data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this reptile?" }, class: "bttn", style: "--color: #3d673e;"  %>
-                </div>
+              <div class="m-3">
+                <%= link_to "Delete Booking", booking_path(booking), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this booking?" }, class: "bttn", style: "--color: #3d673e;"  %>
               </div>
             <% end %>
           <% end %>
