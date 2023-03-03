@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container container-mb" id="text-decoration-none">
 
   <div class="row">
 
@@ -6,23 +6,31 @@
       <div class="bookings-main-card">
         <h1 class="title">Upcoming bookings</h1>
         <% @user.bookings.each do |booking| %>
-          <%= link_to reptile_path(booking.reptile) do %>
             <% if booking.end_date >= Date.today %>
-              <div class="bookings-individual-card">
-                <% link_to %>
-                <h4><%= "#{booking.reptile.name} the #{booking.reptile.species}" %></h4>
+              <div class="border-bottom my-5">
                 <div>
-                  <%= "#{booking.start_date} to #{booking.end_date}" %>
-                </div>
-                <% booking_length = booking.end_date - booking.start_date + 1 %>
-                <% booking_price = booking_length * (booking.reptile.daily_price) %>
-                <%= "£#{booking_price} (#{booking_length} days @ £#{booking.reptile.daily_price}/day)" %>
+                  <%= link_to reptile_path(booking.reptile) do %>
+                    <div class="bookings-individual-card">
+                      <div class="d-flex justify-content-between">
+                        <h4><strong><%= "#{booking.reptile.name} the #{booking.reptile.species}" %></strong></h4>
+                        <div>
+                          <p><%= "#{booking.start_date} to #{booking.end_date}" %></p>
+                        </div>
+                      </div>
+                      <% booking_length = booking.end_date - booking.start_date + 1 %>
+                      <% booking_price = booking_length * (booking.reptile.daily_price) %>
+                      <%= "£#{booking_price} (#{booking_length} days @ £#{booking.reptile.daily_price}/day)" %>
+                    </div>
 
-              <div class="m-3">
-                <%= link_to "Delete Booking", booking_path(booking), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this booking?" }, class: "bttn", style: "--color: #3d673e;"  %>
+                    <div class="d-flex justify-content-end">
+                      <div class="m-3">
+                        <%= link_to "Delete Booking", booking_path(booking), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this booking?" }, class: "bttn-small", style: "--color: #3d673e;"  %>
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
               </div>
             <% end %>
-          <% end %>
         <% end %>
       </div>
     </div>
@@ -33,14 +41,28 @@
         <% @user.bookings.each do |booking| %>
         <%= link_to reptile_path(booking.reptile) do %>
             <% if booking.end_date < Date.today %>
-              <div class="bookings-individual-card">
-                <h5><%= booking.reptile.name %></h5>
-                <%= booking.reptile.species %>
-                <% booking_length = booking.end_date - booking.start_date + 1 %>
-                <% booking_price = booking_length * booking.reptile.daily_price %>
-                <%= "£#{booking_price} (#{booking_length} days @ £#{booking.reptile.daily_price}/day)" %>
-                <%= "Start: #{booking.start_date}" %>
-                <%= "End: #{booking.end_date}" %>
+<div class="border-bottom my-5">
+                <div>
+                  <%= link_to reptile_path(booking.reptile) do %>
+                    <div class="bookings-individual-card">
+                      <div class="d-flex justify-content-between">
+                        <h6><strong><%= "#{booking.reptile.name} the #{booking.reptile.species}" %></strong></h6>
+                        <div>
+                          <h6><%= "#{booking.start_date} to #{booking.end_date}" %></h6>
+                        </div>
+                      </div>
+                      <% booking_length = booking.end_date - booking.start_date + 1 %>
+                      <% booking_price = booking_length * (booking.reptile.daily_price) %>
+                      <h6><%= "£#{booking_price} (#{booking_length} days @ £#{booking.reptile.daily_price}/day)" %></h6>
+                    </div>
+
+                    <div class="d-flex justify-content-end">
+                      <div class="m-3">
+                        <%= link_to "Delete Booking", booking_path(booking), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this booking?" }, class: "bttn-small", style: "--color: #3d673e;"  %>
+                      </div>
+                    </div>
+                  </div>
+                <% end %>
               </div>
             <% end %>
           <% end %>
