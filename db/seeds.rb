@@ -243,7 +243,6 @@ puts "Creating Reptiles and users"
   puts "reptiles created"
 
 
-
   # t.string "email", default: "", null: false
   # t.string "encrypted_password", default: "", null: false
   # t.string "reset_password_token"
