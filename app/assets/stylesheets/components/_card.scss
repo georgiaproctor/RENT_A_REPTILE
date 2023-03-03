@@ -63,3 +63,13 @@
   grid-gap: 16px;
 }
 
+.bookings-card {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100;
+  margin: 30px;
+  padding: 5px;
+  position: relative;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.315);
+}
