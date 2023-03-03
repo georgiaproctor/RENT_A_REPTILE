@@ -77,6 +77,50 @@ puts "Creating Reptiles and users"
     )
 
 
+    luke = Reptile.create!(
+      name: "Luke",
+      description: "Crocodiles (family Crocodylidae) or true crocodiles are large semiaquatic reptiles that live throughout the tropics in Africa, Asia, the Americas and Australia. The term crocodile is sometimes used even more loosely to include all extant members of the order Crocodilia, which includes the alligators and caimans (family Alligatoridae), the gharial and false gharial (family Gavialidae) among other extinct taxa.",
+      species: "Crocodile",
+      daily_price: 11.89,
+      user: user5
+    )
+    file_5 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677838839/development/u32cwbbr9bxubbb87rm2z8qm3dg6.jpg")
+    luke.photo.attach(io: file_5, filename:"harry.jpg", content_type: "image/jpg")
+
+    henry = Reptile.create!(
+      name: "Henry",
+      description: "The crested gecko or eyelash gecko (Correlophus ciliatus) is a species of gecko native to southern New Caledonia. In 1866, the crested gecko was described by French zoologist Alphonse Guichenot.[1][2] This species was thought to be extinct until it was rediscovered in 1994 during an expedition led by Robert Seipp.[3][4] Along with several other New Caledonian gecko species, it is being considered for protected status by the Convention on the International Trade in Endangered Species of Wild Flora and Fauna.
+
+      ",
+      species: "Crested gecko",
+      daily_price: 21.00,
+      user: user6
+    )
+    file_6 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677779850/licensed-image_rlnn1y.jpg")
+    henry.photo.attach(io: file_6, filename:"harry.jpg", content_type: "image/jpg")
+
+    leo = Reptile.create!(
+      name: "Leo",
+      description: "The Komodo dragon (Varanus komodoensis), also known as the Komodo monitor, is a member of the monitor lizard family Varanidae that is endemic to the Indonesian islands of Komodo, Rinca, Flores, and Gili Motang. It is the largest extant species of lizard, growing to a maximum length of 3 m (9.8 ft), and weighing up to 70 kg (150 lb).
+
+      As a result of their size, Komodo dragons are apex predators, and dominate the ecosystems in which they live. Komodo dragons hunt and ambush prey including invertebrates, birds, and mammals. It has been claimed that they have a venomous bite; there are two glands in the lower jaw that secrete several toxic proteins. The biological significance of these proteins is disputed, but the glands have been shown to secrete an anticoagulant. Komodo dragons' group behavior in hunting is exceptional in the reptile world. The diet of Komodo dragons mainly consists of Javan rusa (Rusa timorensis), though they also eat considerable amounts of carrion. Komodo dragons also occasionally attack humans.",
+      species: "Komodo Dragon",
+      daily_price: 9.00,
+      user: user7
+    )
+    file_7 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677779914/development/surnm39eav68y6lxn4sjzlvmdmin.webp")
+    leo.photo.attach(io: file_7, filename:"harry.jpg", content_type: "image/jpg")
+
+
+    delilah = Reptile.create!(
+      name: "Delilah",
+      description: "Chameleons or chamaeleons (family Chamaeleonidae) are a distinctive and highly specialized clade of Old World lizards with 200 species described as of June 2015.[1] The members of this family are best known for their distinct range of colors, being capable of shifting to different hues and degrees of brightness. The large number of species in the family exhibit considerable variability in their capacity to change color. For some, it is more of a shift of brightness (shades of brown); for others, a plethora of color-combinations (reds, yellows, greens, blues) can be seen.",
+      species: "Chameleon",
+      daily_price: 19.08,
+      user: user8
+    )
+    file_8 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677839926/balogun-wareez-ZAqDui0HXRU-unsplash_su6fpr.jpg")
+    delilah.photo.attach(io: file_8, filename:"harry.jpg", content_type: "image/jpg")
 
    harry = Reptile.create!(
     name: "Harry",
@@ -120,51 +164,6 @@ puts "Creating Reptiles and users"
 
   file_4 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677768492/iguana_yfqgbc.jpg")
   mark.photo.attach(io: file_4, filename:"harry.jpg", content_type: "image/jpg")
-
-   luke = Reptile.create!(
-    name: "Luke",
-    description: "Crocodiles (family Crocodylidae) or true crocodiles are large semiaquatic reptiles that live throughout the tropics in Africa, Asia, the Americas and Australia. The term crocodile is sometimes used even more loosely to include all extant members of the order Crocodilia, which includes the alligators and caimans (family Alligatoridae), the gharial and false gharial (family Gavialidae) among other extinct taxa.",
-    species: "Crocodile",
-    daily_price: 11.89,
-    user: user5
-  )
-  file_5 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677838839/development/u32cwbbr9bxubbb87rm2z8qm3dg6.jpg")
-  luke.photo.attach(io: file_5, filename:"harry.jpg", content_type: "image/jpg")
-
-  henry = Reptile.create!(
-    name: "Henry",
-    description: "The crested gecko or eyelash gecko (Correlophus ciliatus) is a species of gecko native to southern New Caledonia. In 1866, the crested gecko was described by French zoologist Alphonse Guichenot.[1][2] This species was thought to be extinct until it was rediscovered in 1994 during an expedition led by Robert Seipp.[3][4] Along with several other New Caledonian gecko species, it is being considered for protected status by the Convention on the International Trade in Endangered Species of Wild Flora and Fauna.
-
-    ",
-    species: "Crested gecko",
-    daily_price: 21.00,
-    user: user6
-  )
-  file_6 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677779850/licensed-image_rlnn1y.jpg")
-  henry.photo.attach(io: file_6, filename:"harry.jpg", content_type: "image/jpg")
-
-  leo = Reptile.create!(
-    name: "Leo",
-    description: "The Komodo dragon (Varanus komodoensis), also known as the Komodo monitor, is a member of the monitor lizard family Varanidae that is endemic to the Indonesian islands of Komodo, Rinca, Flores, and Gili Motang. It is the largest extant species of lizard, growing to a maximum length of 3 m (9.8 ft), and weighing up to 70 kg (150 lb).
-
-    As a result of their size, Komodo dragons are apex predators, and dominate the ecosystems in which they live. Komodo dragons hunt and ambush prey including invertebrates, birds, and mammals. It has been claimed that they have a venomous bite; there are two glands in the lower jaw that secrete several toxic proteins. The biological significance of these proteins is disputed, but the glands have been shown to secrete an anticoagulant. Komodo dragons' group behavior in hunting is exceptional in the reptile world. The diet of Komodo dragons mainly consists of Javan rusa (Rusa timorensis), though they also eat considerable amounts of carrion. Komodo dragons also occasionally attack humans.",
-    species: "Komodo Dragon",
-    daily_price: 9.00,
-    user: user7
-  )
-  file_7 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677779914/development/surnm39eav68y6lxn4sjzlvmdmin.webp")
-  leo.photo.attach(io: file_7, filename:"harry.jpg", content_type: "image/jpg")
-
-
-  delilah = Reptile.create!(
-    name: "Delilah",
-    description: "Chameleons or chamaeleons (family Chamaeleonidae) are a distinctive and highly specialized clade of Old World lizards with 200 species described as of June 2015.[1] The members of this family are best known for their distinct range of colors, being capable of shifting to different hues and degrees of brightness. The large number of species in the family exhibit considerable variability in their capacity to change color. For some, it is more of a shift of brightness (shades of brown); for others, a plethora of color-combinations (reds, yellows, greens, blues) can be seen.",
-    species: "Chameleon",
-    daily_price: 19.08,
-    user: user8
-  )
-  file_8 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677839926/balogun-wareez-ZAqDui0HXRU-unsplash_su6fpr.jpg")
-  delilah.photo.attach(io: file_8, filename:"harry.jpg", content_type: "image/jpg")
 
   cleo = Reptile.create!(
     name: "Cleo",
@@ -218,8 +217,8 @@ puts "Creating Reptiles and users"
   )
 
   booking3 = Booking.create(
-    start_date: "2000-07-01",
-    end_date: "2004-05-08",
+    start_date: "2000-12-01",
+    end_date: "2001-01-08",
       user: user2,
       reptile: greg
 
@@ -235,10 +234,9 @@ puts "Creating Reptiles and users"
 
   booking5 = Booking.create(
     start_date: "2015-09-01",
-    end_date: "2016-05-08",
+    end_date: "2015-10-08",
       user: user2,
       reptile: luke
   )
 
   puts "reptiles created"
-
