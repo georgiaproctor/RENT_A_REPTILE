@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   resources :reptiles do
     resources :bookings, only: [:new, :create]
   end
+
+  resources :bookings, only: [:destroy]
 end
