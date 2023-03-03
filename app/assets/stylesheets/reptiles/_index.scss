@@ -2,3 +2,7 @@
   margin-bottom: 10rem !important;
   margin-top: 2rem !important;
 }
+.reusable-card:hover {
+    transform: scale(1.05);
+    transition: 0.5s;
+}
