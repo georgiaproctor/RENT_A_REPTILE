@@ -9,6 +9,7 @@
 puts "Cleaning database"
 Reptile.destroy_all
 User.destroy_all
+Booking.destroy_all
 
 require 'open-uri'
 
@@ -198,6 +199,46 @@ puts "Creating Reptiles and users"
   )
   file_11 = URI.open("https://res.cloudinary.com/dz5xhbsjv/image/upload/v1677841101/gettyimages-1145422609_ywzfzv.webp")
   otis.photo.attach(io: file_11, filename:"harry.jpg", content_type: "image/jpg")
+
+  booking1 = Booking.create(
+    start_date: "2020-01-01",
+    end_date: "2020-02-05",
+      user: user2,
+      reptile: john
+
+
+  )
+
+  booking2 = Booking.create(
+    start_date: "2022-01-01",
+    end_date: "2023-02-05",
+      user: user1,
+      reptile: harry
+
+  )
+
+  booking3 = Booking.create(
+    start_date: "2000-07-01",
+    end_date: "2004-05-08",
+      user: user3,
+      reptile: greg
+
+  )
+
+  booking4 = Booking.create(
+    start_date: "2010-09-01",
+    end_date: "2011-05-08",
+      user: user4,
+      reptile: mark
+
+  )
+
+  booking5 = Booking.create(
+    start_date: "2015-09-01",
+    end_date: "2016-05-08",
+      user: user5,
+      reptile: luke
+  )
 
   puts "reptiles created"
 
