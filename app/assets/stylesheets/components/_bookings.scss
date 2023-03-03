@@ -1,7 +1,43 @@
 .title {
  font-family: "Nunito", Helvetica, sans-serif;
- color: #3d673e;
- text-shadow: 0 0 10px whitesmoke;
+ color: $light-gray;
+ padding: 8px;
+ text-shadow: 0 0 10px var(--color);
  text-decoration: underline;
+}
 
+.bookings-main-card {
+  font-family: $headers-font;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: #3d673e6a;
+  border-radius: 5px;
+  width: 100;
+  margin: 32px 4px;
+  padding: 24px;
+  position: relative;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.315);
+}
+
+.bookings-individual-card {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: $light-gray;
+  border-radius: 5px;
+  color: $gray;
+  margin: 4px 0px;
+  width: 100;
+  padding: 12px;
+  position: relative;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.315);
+}
+
+.bookings-individual-card:hover {
+  background-color: #3d673e;
+  color: $light-gray;
+  transition: 0.5s;
+  position: relative;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.315);
 }
