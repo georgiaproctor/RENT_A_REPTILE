@@ -8,6 +8,7 @@
  background-repeat: no-repeat;
  background-position: center;
  background-size: cover;
+ border-radius: 5px;
  width: 300px;
  height: 350px;
  position: relative;
@@ -30,6 +31,7 @@
   background-color: #e4f2fd;
   display: flex;
   align-items: center;
+  border-radius: 5px;
   padding: 20px;
   @include bottom();
   bottom: 0;
@@ -61,15 +63,4 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 16px;
-}
-
-.bookings-card {
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: 100;
-  margin: 30px;
-  padding: 5px;
-  position: relative;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.315);
 }

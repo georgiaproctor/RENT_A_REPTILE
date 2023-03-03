@@ -3,11 +3,11 @@
   <div class="row">
 
     <div class="col-8">
-      <div class="bookings-card">
-        <h1>Upcoming bookings</h1>
+      <div class="bookings-main-card">
+        <h1 class="title">Upcoming bookings</h1>
         <% @user.bookings.each do |booking| %>
           <% if booking.end_date >= Date.today %>
-            <div class="bookings-card">
+            <div class="bookings-individual-card">
               <h5><%= booking.reptile.name %></h5>
               <%= booking.reptile.species %>
               <% booking_length = booking.end_date - booking.start_date + 1 %>
@@ -27,11 +27,11 @@
     </div>
 
     <div class="col-4">
-      <div class="bookings-card">
-        <h4>Past bookings</h4>
+      <div class="bookings-main-card">
+        <h4 class="title">Past bookings</h4>
         <% @user.bookings.each do |booking| %>
           <% if booking.end_date < Date.today %>
-            <div class="bookings-card">
+            <div class="bookings-individual-card">
               <h5><%= booking.reptile.name %></h5>
               <%= booking.reptile.species %>
               <% booking_length = booking.end_date - booking.start_date + 1 %>
