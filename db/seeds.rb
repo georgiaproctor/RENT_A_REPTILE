@@ -92,7 +92,7 @@ puts "Creating Reptiles and users"
    john = Reptile.create!(
     name: "John",
     description: "Turtles are an order of reptiles known as Testudines, characterized by a special shell developed mainly from their ribs. Modern turtles are divided into two major groups, the Pleurodira (side necked turtles) and Cryptodira (hidden necked turtles), which differ in the way the head retracts. There are 360 living and recently extinct species of turtles, including land-dwelling tortoises and freshwater terrapins. They are found on most continents, some islands and, in the case of sea turtles, much of the ocean.",
-    species: "Turtles",
+    species: "Turtle",
     daily_price: rand(850..1500),
     user: user2
   )
@@ -212,7 +212,7 @@ puts "Creating Reptiles and users"
   booking2 = Booking.create(
     start_date: "2022-01-01",
     end_date: "2023-02-05",
-      user: user1,
+      user: user2,
       reptile: harry
 
   )
@@ -220,7 +220,7 @@ puts "Creating Reptiles and users"
   booking3 = Booking.create(
     start_date: "2000-07-01",
     end_date: "2004-05-08",
-      user: user3,
+      user: user2,
       reptile: greg
 
   )
@@ -228,7 +228,7 @@ puts "Creating Reptiles and users"
   booking4 = Booking.create(
     start_date: "2010-09-01",
     end_date: "2011-05-08",
-      user: user4,
+      user: user2,
       reptile: mark
 
   )
@@ -236,7 +236,7 @@ puts "Creating Reptiles and users"
   booking5 = Booking.create(
     start_date: "2015-09-01",
     end_date: "2016-05-08",
-      user: user5,
+      user: user2,
       reptile: luke
   )
 
