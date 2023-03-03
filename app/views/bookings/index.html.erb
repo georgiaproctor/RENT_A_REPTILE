@@ -6,20 +6,22 @@
       <div class="bookings-main-card">
         <h1 class="title">Upcoming bookings</h1>
         <% @user.bookings.each do |booking| %>
-          <% if booking.end_date >= Date.today %>
-            <div class="bookings-individual-card">
-              <h5><%= booking.reptile.name %></h5>
-              <%= booking.reptile.species %>
-              <% booking_length = booking.end_date - booking.start_date + 1 %>
-              <% booking_price = booking_length * booking.reptile.daily_price %>
-              <%= "£#{booking_price} (#{booking_length} days @ £#{booking.reptile.daily_price}/day)" %>
-              <%= "Start: #{booking.start_date}" %>
-              <%= "End: #{booking.end_date}" %>
+          <%= link_to reptile_path(booking.reptile) do %>
+            <% if booking.end_date >= Date.today %>
+              <div class="bookings-individual-card">
+                <% link_to %>
+                <h4><%= "#{booking.reptile.name} the #{booking.reptile.species}" %></h4>
+                <div>
+                  <%= "#{booking.start_date} to #{booking.end_date}" %>
+                </div>
+                <% booking_length = booking.end_date - booking.start_date + 1 %>
+                <% booking_price = booking_length * (booking.reptile.daily_price) %>
+                <%= "£#{booking_price} (#{booking_length} days @ £#{booking.reptile.daily_price}/day)" %>
 
               <div class="m-3">
                 <%= link_to "Delete Booking", booking_path(booking), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this booking?" }, class: "bttn", style: "--color: #3d673e;"  %>
               </div>
-            </div>
+            <% end %>
           <% end %>
         <% end %>
       </div>
@@ -27,18 +29,20 @@
 
     <div class="col-4">
       <div class="bookings-main-card">
-        <h4 class="title">Past bookings</h4>
+        <h3 class="title">Past bookings</h3>
         <% @user.bookings.each do |booking| %>
-          <% if booking.end_date < Date.today %>
-            <div class="bookings-individual-card">
-              <h5><%= booking.reptile.name %></h5>
-              <%= booking.reptile.species %>
-              <% booking_length = booking.end_date - booking.start_date + 1 %>
-              <% booking_price = booking_length * booking.reptile.daily_price %>
-              <%= "£#{booking_price} (#{booking_length} days @ £#{booking.reptile.daily_price}/day)" %>
-              <%= "Start: #{booking.start_date}" %>
-              <%= "End: #{booking.end_date}" %>
-            </div>
+        <%= link_to reptile_path(booking.reptile) do %>
+            <% if booking.end_date < Date.today %>
+              <div class="bookings-individual-card">
+                <h5><%= booking.reptile.name %></h5>
+                <%= booking.reptile.species %>
+                <% booking_length = booking.end_date - booking.start_date + 1 %>
+                <% booking_price = booking_length * booking.reptile.daily_price %>
+                <%= "£#{booking_price} (#{booking_length} days @ £#{booking.reptile.daily_price}/day)" %>
+                <%= "Start: #{booking.start_date}" %>
+                <%= "End: #{booking.end_date}" %>
+              </div>
+            <% end %>
           <% end %>
         <% end %>
       </div>
