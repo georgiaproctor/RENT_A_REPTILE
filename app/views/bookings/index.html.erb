@@ -55,12 +55,6 @@
                       <% booking_price = booking_length * (booking.reptile.daily_price) %>
                       <h6><%= "£#{booking_price} (#{booking_length} days @ £#{booking.reptile.daily_price}/day)" %></h6>
                     </div>
-
-                    <div class="d-flex justify-content-end">
-                      <div class="m-3">
-                        <%= link_to "Delete Booking", booking_path(booking), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to delete this booking?" }, class: "bttn-small", style: "--color: #3d673e;"  %>
-                      </div>
-                    </div>
                   </div>
                 <% end %>
               </div>
