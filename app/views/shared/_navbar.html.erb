@@ -8,7 +8,7 @@
         <marquee direction="right"><h1 style="font-stretch:expanded;"> Rent-A-Reptile</h1></marquee>
       </div>
     </div>
-   
+
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -16,15 +16,15 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto">
-          <% if user_signed_in? %>  
+          <% if user_signed_in? %>
                   <div class=" m-3">
                       <%= link_to(reptiles_path, class: "bttn", style: "--color: #3d673e;") do %>
-                        See Reptiles 
+                        See Reptiles
                         <% end %>
                     </div>
                     <div class=" m-3">
                       <%= link_to(new_reptile_path, class: "bttn", style: "--color: #3d673e;") do %>
-                        Rent your Reptile
+                        List your Reptile
                         <% end %>
                     </div>
           <% else %>
@@ -36,7 +36,7 @@
 
         <div class="nav-item dropdown">
           <%= image_tag "dropdown_img.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <% if user_signed_in? %>  
+          <% if user_signed_in? %>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Home", root_path, class: "dropdown-item" %>
               <%= link_to "bookings", user_bookings_path(current_user), class: "dropdown-item" %>
@@ -47,12 +47,6 @@
       </div>
 
 
-      
+
   </div>
 </div>
-
-
- 
-       
-
-

@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
     @booking.reptile = Reptile.find(params[:reptile_id])
     @booking.user = current_user
     if @booking.save
-      redirect_to user_path(@booking.user)
+      redirect_to user_bookings_path(@booking.user)
     else
       render :new, status: :unprocessable_entity
     end
