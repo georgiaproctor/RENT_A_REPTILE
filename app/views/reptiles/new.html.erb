@@ -2,28 +2,30 @@
   <div class="container">
 
 
-  <h1 class="green-title">List your reptilian friend</h1>
+    <h1 class="green-title">List your reptilian friend</h1>
 
-    <div class="row">
+      <div class="row">
 
-      <div class="col-6">
-        <%= simple_form_for(@reptile) do |f| %>
-        <%= f.input :name %>
-        <%= f.input :description %>
-        <%= f.input :species %>
-        <%= f.input :daily_price %>
+        <div class="col-6">
+          <%= simple_form_for(@reptile) do |f| %>
+          <%= f.input :name %>
+          <%= f.input :description %>
+          <%= f.input :species %>
+          <%= f.input :daily_price %>
+        </div>
+
+        <div class="col-6">
+          <%= f.input :photo, as: :file  %>
+          </div>
+          <%= f.submit class: 'bttn', value: "book", style: "--color: #3d673e;"%>
+          <% end %>
+        </div>
+
+        <div class="button-right mt-3">
+          <%= link_to(reptiles_path, class: "bttn") do %>
+            back
+          <% end %>
+        </div>
       </div>
-      <div class="col-6">
-      <%= f.input :photo, as: :file  %>
-      </div>
-      <%= f.submit class: 'bttn', value: "book"%>
-      <% end %>
-    </div>
   </div>
-</div>
-
-<div class="button-right">
-  <%= link_to(reptiles_path, class: "bttn", style: "--color: #3d673e;") do %>
-  back
-  <% end %>
 </div>
